@@ -1,4 +1,4 @@
-# Maxdevwebsite Portfolio
+# Maxdevswebsite Portfolio
 
 A modern personal portfolio website built with plain HTML, CSS, and JavaScript. The site showcases a developer-focused profile with sections for about, services, resume, featured projects, and contact information.
 

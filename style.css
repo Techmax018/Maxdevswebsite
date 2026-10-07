@@ -130,15 +130,23 @@ a:hover {
     align-items: center;
 }
 
-.logo span {
+.logo-name > span {
     color: var(--accent-color);
 }
 
+.logo-name {
+    color: var(--light-text-color);
+    transition: color var(--transition-speed);
+}
+
+.logo:hover .logo-name {
+    color: var(--secondary-accent-color);
+}
+
 .logo img {
-    height: 60px;
-    width: 60px;
-    margin-right: 10px;
-    border-radius: 50%;
+    width: 95px;
+    height: auto;
+    margin-right: 8px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -324,7 +332,7 @@ a:hover {
 }
 
 .img-box:hover .img-item img {
-    transform: scale(1.1);
+    transform: scale(0.94);
 }
 
 .img-item{
@@ -335,7 +343,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color); /* Inner background */
+    background-color: #03a9f4;
     position: relative; /* Ensure image is above glow */
     z-index: 1; /* Place above the ::after pseudo-element */
 }
@@ -361,8 +369,9 @@ a:hover {
 .img-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 50%;
+    transform: scale(0.9);
     transition: transform var(--transition-speed);
 }
 
@@ -894,6 +903,15 @@ a:hover {
     font-size: 1em;
 }
 
+.footer-logo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 16px;
+    border-radius: 4px;
+}
+
 .footer-container span {
     font-weight: 700;
     color: var(--light-text-color);
@@ -1035,6 +1053,13 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    html {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    html::-webkit-scrollbar {
+        display: none;
+    }
     #menu-icon {
         display: block; /* Show hamburger icon */
     }
@@ -1068,6 +1093,12 @@ a:hover {
     .navbar-nav a:hover,
     .navbar-nav a.active {
         border-bottom: none; /* Ensure no underline on hover/active for mobile nav links */
+    }
+    .logo img {
+        width: 72px;
+    }
+    .logo-name {
+        display: none;
     }
 
     .home-text h1 {
@@ -1105,6 +1136,10 @@ a:hover {
 @media (max-width: 480px) {
     .logo {
         font-size: 2em;
+    }
+    .logo img {
+        width: 58px;
+        margin-right: 6px;
     }
     .home-text h1 {
         font-size: 2.8em;
@@ -1164,12 +1199,3 @@ a:hover {
     }
 
 }
-
-
-
-
-
-
-
-
-
